@@ -1,5 +1,7 @@
 import React from "react";
 
-function PokemonInfo() {}
+function PokemonInfo({ option }) {
+  return <p>{option.desc}</p>;
+}
 
 export default PokemonInfo;

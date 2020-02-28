@@ -1,27 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import SearchField from "./SearchBar/SearchField";
 import OptionsList from "./AutoComplete/OptionList";
-let pokeData = fetch("http://localhost:3000/pokemon")
-  .then(response => {
-    return response.json();
-  })
-  .then(data => {
-    console.log(data);
-    data.map(x => {
-      console.log(x.name);
-    });
-  });
+let header =
+  "https://fontmeme.com/permalink/200228/78c019343aff9b02f2900e2278bde900.png";
 
 function App() {
-  const [input, setInput] = React.useState("");
+  const [input, setInput] = useState("");
+  const [option, setOption] = useState([]);
+
+  function handleClick(event) {
+    setInput(event.target.innerText);
+    console.log("clicked");
+  }
+
   function handleChange(event) {
     setInput(event.target.value);
   }
   return (
     <div className="App">
+      <img src={header} />
       <SearchField input={input} handleChange={handleChange} />
-      <OptionsList options={pokeData} input={input} />
+      <OptionsList
+        input={input}
+        setOption={setOption}
+        option={option}
+        handleClick={handleClick}
+      />
     </div>
   );
 }

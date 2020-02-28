@@ -2,7 +2,7 @@ import React from "react";
 import SearchButton from "./SearchButton";
 
 function SearchField({ input, handleChange }) {
-  function handleClick() {}
+  function clicked() {}
 
   return (
     <div>
@@ -11,7 +11,7 @@ function SearchField({ input, handleChange }) {
         onChange={handleChange}
         placeholder="Who's that Pokémon?"
       ></input>
-      <SearchButton handleClick={handleClick} />
+      <SearchButton clicked={clicked} />
     </div>
   );
 }

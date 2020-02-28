@@ -1,0 +1,25 @@
+ul {
+  padding-inline-start: 0px;
+  text-align: center;
+  display: inline-block;
+}
+li {
+  float: center;
+  border: 2px solid rgb(42, 117, 187);
+  list-style: none;
+  margin: 10px;
+  width: 350px;
+  height: 400px;
+  background-color: #ffde00;
+  border-radius: 10%;
+  line-height: 18px;
+}
+li > img {
+  width: 200px;
+  border: 2px solid black;
+  background-color: rgb(82, 80, 80);
+  margin-top: 5px;
+}
+li > p {
+  margin: 5px;
+}
